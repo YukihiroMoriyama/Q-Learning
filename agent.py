@@ -16,7 +16,7 @@ class Agent:
         after = self.learning_rate * (r + self.gamma * self.getMaxQ(s2))
         self.Q[s1][a] = before + after
 
-    def getMaxQ(self, s):
+    def get_maxQ(self, s):
         q1 = self.Q[s][0]
         q2 = self.Q[s][1]
         if (q1 > q2):
