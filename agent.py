@@ -13,7 +13,7 @@ class Agent:
 
     def learning(self, s1, a, s2, r):
         before = (1 - self.learning_rate) * self.Q[s1][a]
-        after = self.learning_rate * (r + self.gamma * self.getMaxQ(s2))
+        after = self.learning_rate * (r + self.gamma * self.get_maxQ(s2))
         self.Q[s1][a] = before + after
 
     def get_maxQ(self, s):
